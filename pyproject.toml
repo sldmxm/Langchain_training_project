@@ -1,0 +1,28 @@
+[project]
+name = "llm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-openai>=0.3.4",
+    "openai>=1.61.1",
+    "pandas>=2.2.3",
+    "python-dotenv>=1.0.1",
+    "tqdm>=4.67.1",
+]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff]
+lint.select = ["E", "F", "B", "I", "SIM",]
+exclude = ["settings.py","migrations"]
+line-length = 79
+
+[tool.mypy]
+exclude= ['^year_2024/', '^2024/']
+strict = true
+ignore_missing_imports = true
+disallow_untyped_decorators = false
+disable_error_code = ["import-untyped"]
