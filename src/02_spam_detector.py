@@ -106,7 +106,7 @@ def batch_process_spam(df: pd.DataFrame, batch_size: int = 10) -> None:
 
 
 if __name__ == '__main__':
-    df = pd.read_csv('data/02_correct_ans_2_2_8.csv')
+    df = pd.read_csv('data/02_crypto_spam.csv')
     df.head()
     df['text'] = df['text'].str.strip()
     one_by_one_process_spam(df)

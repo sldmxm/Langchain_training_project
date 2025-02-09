@@ -29,7 +29,7 @@ if __name__ == '__main__':
         api_key=OPENAI_API_KEY,
         model_name='gpt-4o-mini-2024-07-18',
     )
-    df = pd.read_csv('data/01_submission100lines.csv')
+    df = pd.read_csv('data/01_rent.csv')
     df.head()
     results = []
     for input_texts in tqdm(df['text']):
@@ -38,4 +38,4 @@ if __name__ == '__main__':
         results.append(amount)
 
     df['predicted_people'] = results
-    df.to_csv('data/01_submission100lines_predicted.csv', index=False)
+    df.to_csv('data/01_rent_predicted.csv', index=False)
