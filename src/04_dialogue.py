@@ -66,8 +66,6 @@ if __name__ == '__main__':
         if str(answer) != str(right_answer):
             wrong_counter += 1
 
-    print(store)
-
     print(f'Total answers: {len(answers)}')
     print(f'Wrong answers: {wrong_counter}')
     print(f'Error rate: {(wrong_counter/len(answers))*100:.2f}%')
