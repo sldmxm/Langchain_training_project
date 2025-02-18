@@ -1,5 +1,5 @@
 [project]
-name = "llm"
+name = "Langchain_training_project"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -23,7 +23,7 @@ exclude = ["settings.py","migrations"]
 line-length = 79
 
 [tool.mypy]
-exclude= ['^year_2024/', '^2024/']
+exclude= []
 strict = true
 ignore_missing_imports = true
 disallow_untyped_decorators = false
