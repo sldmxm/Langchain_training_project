@@ -109,7 +109,6 @@ if __name__ == '__main__':
     PARAM_NUM = 5
 
     df = pd.read_csv('data/03_vacancies.csv')
-    df.head()
     df['text'] = df['text'].str.strip()
 
     wrong_counter = 0

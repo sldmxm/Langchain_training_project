@@ -43,7 +43,6 @@ def get_session_history(session_id: str) -> InMemoryChatMessageHistory:
 
 if __name__ == '__main__':
     df = pd.read_csv('data/04_dialogues.csv')
-    df.head()
     df['question'] = df['question'].str.strip()
 
     chain = RunnableWithMessageHistory(

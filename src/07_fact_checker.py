@@ -20,7 +20,9 @@ Answer = Literal['true', 'false', 'uncertain']
 def answer_question(question: str) -> Answer:
     """Отвечает на вопрос, используя базу знаний модели.
     Возвращает 'true', 'false' или 'uncertain'"""
-    llm = ChatOpenAI(temperature=0.0, model_name=MODEL_NAME)
+    llm = ChatOpenAI(
+        temperature=0.0, api_key=OPENAI_API_KEY, model_name=MODEL_NAME
+    )
     response = llm.invoke(
         f"""Ответь 'true', 'false' или 'uncertain'
         на следующее утверждение: {question}"""

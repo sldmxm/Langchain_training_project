@@ -30,7 +30,6 @@ if __name__ == '__main__':
         model_name='gpt-4o-mini-2024-07-18',
     )
     df = pd.read_csv('data/01_rent.csv')
-    df.head()
     results = []
     for input_texts in tqdm(df['text']):
         prompt = PROMPT_TEMPLATE.format(input=input_texts)
